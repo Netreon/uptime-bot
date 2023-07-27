@@ -595,7 +595,6 @@ client.on(Events.InteractionCreate, async interaction => {
 				})
 			}
 		} else {
-			db.set("uptimeu" + interaction.user.id, "bekleyin")
 			db.push("uptimeu" + interaction.user.id, "bekleyin")
 			db.unpush("uptimeu" + interaction.user.id, "bekleyin")
 			const allUptimeValues2 = db.fetch("uptimeu" + interaction.user.id)
