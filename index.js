@@ -347,7 +347,6 @@ client.on(Events.InteractionCreate, async interaction => {
 						} else {
 							await axios.get(link)
 						.then(response => {
-							db.set("uptimeu" + interaction.user.id, link);
 							db.push("uptimeu" + interaction.user.id, link);
 							db.push("uptime", link);
 							const logkanal = client.channels.cache.get(config.logKanal)
