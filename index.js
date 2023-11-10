@@ -116,7 +116,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 		.setColor(Colors.Red)
 		.setTitle("DM'nizi açınız!")
 		.setDescription(`Lütfen DM'nizi kontol edip tekrar deneyiniz, ${interaction.user.toString()}.`)
-		.setFooter({ text: 'Utiric Uptime' })
+		.setFooter({ text: 'Fast Uptime' })
 	if (interaction.customId === 'uekle') {
 		// Create the modal
 		const modal = new ModalBuilder()
@@ -176,7 +176,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 				.setColor(Colors.Blue)
 				.setTitle("Eklediğin Linkler")
 				.setDescription("🔗 " + db.fetch("uptimeu" + interaction.user.id).join('\n🔗 '))
-				.setFooter({ text: 'Utiric Uptime' })
+				.setFooter({ text: 'Fast Uptime' })
 				interaction.reply({ embeds: [goster], ephemeral: true })
 				.catch(err => {
 					interaction.user.send({ embeds: [goster] })
@@ -189,7 +189,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 				.setColor(Colors.Red)
 				.setTitle("Eklediğin Linkler")
 				.setDescription("Hiçbir link eklememişsin!")
-				.setFooter({ text: 'Utiric Uptime' })
+				.setFooter({ text: 'Fast Uptime' })
 				interaction.reply({ embeds: [gosterilemedi], ephemeral: true })
 				.catch(err => {
 					interaction.user.send({ embeds: [gosterilemedi] })
@@ -203,7 +203,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 				.setColor(Colors.Red)
 				.setTitle("Eklediğin Linkler")
 				.setDescription("Hiçbir link eklememişsin!")
-				.setFooter({ text: 'Utiric Uptime' })
+				.setFooter({ text: 'Fasty Uptime' })
 				interaction.reply({ embeds: [gosterilemedi], ephemeral: true })
 				.catch(err => {
 					interaction.user.send({ embeds: [gosterilemedi] })
@@ -223,12 +223,12 @@ client.on(Events.InteractionCreate, async interaction => {
 			.setColor(Colors.Green)
 			.setTitle("Link Eklendi!")
 			.setDescription(`Başarıyla ${link} linkini uptime listesine ekledin!`)
-			.setFooter({ text: 'Utiric Uptime' })
+			.setFooter({ text: 'Fast Uptime' })
 		const zatenekli = new EmbedBuilder()
 			.setColor(Colors.Red)
 			.setTitle("Link Zaten Ekli!")
 			.setDescription(`${link} linki zaten uptime listesinde bulunuyor!`)
-			.setFooter({ text: 'Utiric Uptime' })
+			.setFooter({ text: 'Fast Uptime' })
 
 		const jsonData = fs.readFileSync('croxydb/croxydb.json');
 		const data = JSON.parse(jsonData);
@@ -249,7 +249,7 @@ client.on(Events.InteractionCreate, async interaction => {
 									.setColor(Colors.Red)
 									.setTitle("Link Eklenemedi")
 									.setDescription(`Maksimum olan 10 uptime link limitini aşamazsınız. Uptime ekleme işleminiz engellenmiştir. (Premiumunuz olduğundan normal kullanıcılara limit 5, size 10 olarak tanımlanmıştır.)`)
-									.setFooter({ text: 'Utiric Uptime' })
+									.setFooter({ text: 'Fast Uptime' })
 									interaction.reply({ embeds: [linkEmbed3], ephemeral: true })
 										.catch(err => {
 											interaction.user.send({ embeds: [linkEmbed3] })
@@ -284,7 +284,7 @@ client.on(Events.InteractionCreate, async interaction => {
 											{ name: 'Uptime Tespiti', value: `Tespitlendi`, inline: false},
 											{ name: 'Link', value: `${link}`, inline: true},
 										)
-										.setFooter({ text: 'Utiric Uptime' })
+										.setFooter({ text: 'Fast Uptime' })
 										logkanal.send({ embeds: [linkEmbed2] })
 										interaction.reply({ embeds: [eklendi], ephemeral: true })
 											.catch(err => {
@@ -304,7 +304,7 @@ client.on(Events.InteractionCreate, async interaction => {
 											{ name: 'Uptime Tespiti', value: `Tespitlenemedi`, inline: false},
 											{ name: 'Link', value: `${link}`, inline: true},
 										)
-										.setFooter({ text: 'Utiric Uptime' })
+										.setFooter({ text: 'Fast Uptime' })
 										logkanal.send({ embeds: [linkEmbed2] })
 										interaction.reply({ embeds: [eklendi], ephemeral: true })
 											.catch(err => {
@@ -320,7 +320,7 @@ client.on(Events.InteractionCreate, async interaction => {
 									.setColor(Colors.Red)
 									.setTitle("Link Eklenemedi")
 									.setDescription(`Lütfen geçerli bir link giriniz!`)
-									.setFooter({ text: 'Utiric Uptime' })
+									.setFooter({ text: 'Fast Uptime' })
 									interaction.reply({ embeds: [hataping], ephemeral: true })
 										.catch(err => {
 											interaction.user.send({ embeds: [hataping] })
@@ -335,7 +335,7 @@ client.on(Events.InteractionCreate, async interaction => {
 								.setColor(Colors.Red)
 								.setTitle("Link Eklenemedi")
 								.setDescription(`Maksimum olan 5 uptime link limitini aşamazsınız. Uptime ekleme işleminiz engellenmiştir.`)
-								.setFooter({ text: 'Utiric Uptime' })
+								.setFooter({ text: 'Fast Uptime' })
 								interaction.reply({ embeds: [linkEmbed3], ephemeral: true })
 									.catch(err => {
 										interaction.user.send({ embeds: [linkEmbed3] })
@@ -364,7 +364,7 @@ client.on(Events.InteractionCreate, async interaction => {
 									{ name: 'Uptime Tespiti', value: `Tespitlendi`, inline: false},
 									{ name: 'Link', value: `${link}`, inline: true},
 								)
-								.setFooter({ text: 'Utiric Uptime' })
+								.setFooter({ text: 'Fast Uptime' })
 								logkanal.send({ embeds: [linkEmbed2] })
 								interaction.reply({ embeds: [eklendi], ephemeral: true })
 									.catch(err => {
@@ -384,7 +384,7 @@ client.on(Events.InteractionCreate, async interaction => {
 									{ name: 'Uptime Tespiti', value: `Tespitlenemedi`, inline: false},
 									{ name: 'Link', value: `${link}`, inline: true},
 								)
-								.setFooter({ text: 'Utiric Uptime' })
+								.setFooter({ text: 'Fast Uptime' })
 								logkanal.send({ embeds: [linkEmbed2] })
 								interaction.reply({ embeds: [eklendi], ephemeral: true })
 									.catch(err => {
@@ -400,7 +400,7 @@ client.on(Events.InteractionCreate, async interaction => {
 							.setColor(Colors.Red)
 							.setTitle("Link Eklenemedi")
 							.setDescription(`Lütfen geçerli bir link giriniz!`)
-							.setFooter({ text: 'Utiric Uptime' })
+							.setFooter({ text: 'Fast Uptime' })
 							interaction.reply({ embeds: [hataping], ephemeral: true })
 								.catch(err => {
 									interaction.user.send({ embeds: [hataping] })
@@ -437,7 +437,7 @@ client.on(Events.InteractionCreate, async interaction => {
 										{ name: 'Uptime Tespiti', value: `Tespitlendi`, inline: false},
 										{ name: 'Link', value: `${link}`, inline: true},
 									)
-									.setFooter({ text: 'Utiric Uptime' })
+									.setFooter({ text: 'Fast Uptime' })
 									logkanal.send({ embeds: [linkEmbed2] })
 									interaction.reply({ embeds: [eklendi], ephemeral: true })
 										.catch(err => {
@@ -458,7 +458,7 @@ client.on(Events.InteractionCreate, async interaction => {
 										{ name: 'Uptime Tespiti', value: `Bulunamadı`, inline: true},
 										{ name: 'Link', value: `${link}`, inline: true},
 									)
-									.setFooter({ text: 'Utiric Uptime' })
+									.setFooter({ text: 'Fast Uptime' })
 									logkanal.send({ embeds: [linkEmbed2] })
 									interaction.reply({ embeds: [eklendi], ephemeral: true })
 										.catch(err => {
@@ -474,7 +474,7 @@ client.on(Events.InteractionCreate, async interaction => {
 								.setColor(Colors.Red)
 								.setTitle("Link Eklenemedi")
 								.setDescription(`Lütfen geçerli bir link giriniz!`)
-								.setFooter({ text: 'Utiric Uptime' })
+								.setFooter({ text: 'Fast Uptime' })
 								interaction.reply({ embeds: [hataping], ephemeral: true })
 									.catch(err => {
 										interaction.user.send({ embeds: [hataping] })
@@ -492,7 +492,7 @@ client.on(Events.InteractionCreate, async interaction => {
 					.setColor(Colors.Red)
 					.setTitle("Link Eklenemedi")
 					.setDescription(`Link yanlış veya HTTPS desteklemiyor. Güvenlik amacıyla HTTPS desteklemeyen linkler uptime listesine eklenemezler.`)
-					.setFooter({ text: 'Utiric Uptime' })
+					.setFooter({ text: 'Fast Uptime' })
 					interaction.reply({ embeds: [hataping5], ephemeral: true })
 						.catch(err => {
 							interaction.user.send({ embeds: [hataping5] })
@@ -506,7 +506,7 @@ client.on(Events.InteractionCreate, async interaction => {
 					.setColor(Colors.Red)
 					.setTitle("Link Eklenemedi")
 					.setDescription(`Lütfen geçerli bir link giriniz!`)
-					.setFooter({ text: 'Utiric Uptime' })
+					.setFooter({ text: 'Fast Uptime' })
 					interaction.reply({ embeds: [hataping], ephemeral: true })
 					.catch(err => {
 						interaction.user.send({ embeds: [hataping] })
@@ -532,12 +532,12 @@ client.on(Events.InteractionCreate, async interaction => {
 			.setColor(Colors.Red)
 			.setTitle("Link Mevcut Değil!")
 			.setDescription(`${link} linki senin uptime listende mevcut değil!`)
-			.setFooter({ text: 'Utiric Uptime' })
+			.setFooter({ text: 'Fast Uptime' })
 		const silindi = new EmbedBuilder()
 			.setColor(Colors.Green)
 			.setTitle("Link Silindi!")
 			.setDescription(`Başarıyla ${link} linkini uptime listesinden silindi!`)
-			.setFooter({ text: 'Utiric Uptime' })
+			.setFooter({ text: 'Fast Uptime' })
 
 		const jsonData = fs.readFileSync('croxydb/croxydb.json');
 		const data = JSON.parse(jsonData);
